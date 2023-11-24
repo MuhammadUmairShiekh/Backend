@@ -12,15 +12,20 @@ const AdsSchema = new Schema({
   },
   category: {
     type: String,
+    required: true,
   },
   location: {
     type: String,
+    required: true,
+
   },
   condition: {
     type: String,
   },
   number: {
     type: Number,
+    required: true,
+
 
   },
   price: {

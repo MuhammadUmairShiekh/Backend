@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require("../models/User")
-// const verifyToken = require('../middelware/verifyToken')
+const verifyToken = require('../middelware/verifyToken')
 
 router.get('/', async (req, res) => {
   const user = await User.find()
@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
   }
 })
 
-router.post('/login', async (req, res) => {
+router.post('/login' , async (req, res) => {
   const { email, password } = req.body
 
   const user = await User.findOne({ email })

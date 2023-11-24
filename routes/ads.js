@@ -54,7 +54,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/addData', verifyToken, async (req, res) => {
+router.post('/addData', async (req, res) => {
     try {
         const ad = new Ads(req.body);
         await ad.save()
