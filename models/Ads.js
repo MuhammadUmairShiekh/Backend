@@ -7,6 +7,9 @@ const AdsSchema = new Schema({
     required: true,
     minlength: 2,
   },
+  image_url: {
+    required: true
+  },
   description: {
     type: String,
   },
