@@ -7,19 +7,17 @@ const AdsSchema = new Schema({
     required: true,
     minlength: 2,
   },
-  image_url: {
-    required: true
+  image: {
+    type: String,
   },
   description: {
     type: String,
   },
   category: {
     type: String,
-    required: true,
   },
   location: {
     type: String,
-    required: true,
 
   },
   condition: {
@@ -27,9 +25,6 @@ const AdsSchema = new Schema({
   },
   number: {
     type: Number,
-    required: true,
-
-
   },
   price: {
     type: Number,
